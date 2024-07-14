@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supabase Data</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .GraphTitle {
+        margin-left: 76px;
+
+      }
+      .recordInfo {
+        font-size: 25px;
+        margin-left: 50px;
+      }
+      .recordUp,.recordDown,.recordSide{
+        border-radius: 10px;
+        width: fit-content;
+        padding:10px;
+        margin-left: 27px;
+      }
+      .recordUp {
+        background-color: hsla(130, 83%, 79%, 0.681);
+      }
+      .recordSide {
+        background-color: rgb(255, 255, 121);
+       
+      }
+      .recordDown {
+        background-color: red;
+       
+      }
+      .navBar a{
+        text-decoration: none;
+
+      }
+      .navBar a:link,a:visited{
+        color:white;
+      }
+      .navBar{
+        background-color: rgb(45, 45, 45);
+        width:60px;
+        height: 30px;
+        color:white;
+        padding-left: 20px;
+        padding-top:5px;
+        border-radius: 5px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navBar">
+      <a href ="{% url  'mainView'%}">home</a>
+    </nav>
+    <h1 class="GraphTitle">{{ data.symbol }}</h1>
+    <div class="recordInfo">
+      <p class="{% if decision == 'up' %}recordUp{% elif decision == 'down' %}recordDown{% elif decision == 'side' %}recordSide{% endif %}">
+        <b>Latest decision:</b> {{ data.decision }} &#160;&#160;
+        <b>As of</b> {{ data.date }} &#160;&#160; {{ data.us_time }}
+      </p>
+    </div>
+
+    {% if chart %}
+      <img src="data:image/png;base64,{{ chart|safe }}" />
+    {% endif %}
+  </body>
+</html>

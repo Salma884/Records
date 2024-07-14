@@ -1,0 +1,59 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top_up {
+    background-color: hsla(300, 90%, 77%, 0.885)
+    ;
+    text-align: center;
+
+}
+
+.top_up  h3{
+    text-align: center;
+}
+.top_up ul {
+    list-style-type: none;
+  }
+
+body {
+    display: inline-block;
+} 
+
+.search{
+    background-color: hsl(197, 86%, 71%);
+
+}
+
+.search .searchbtn{
+    background-color:hsla(238, 97%, 58%, 0.749);
+    border-radius: 10px;
+    background-color:hsl(0, 0%, 15%);
+}
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .GraphTitle {
+    margin-left: 50px;
+  }
+  .recordInfo {
+    font-size: 25px;
+    margin-left: 50px;
+  }
+  .recordUp {
+    background-color: hsla(130, 83%, 79%, 0.681);
+    border-radius: 10px;
+    width: 250px;
+  }
+  .recordSide {
+    background-color: black;
+    border-radius: 10px;
+    width: 250px;
+  }
+  .recordDown {
+    background-color: red;
+    border-radius: 10px;
+    width: 250px;
+  }
